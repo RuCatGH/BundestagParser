@@ -1,3 +1,4 @@
+# Записать спарсенные данные в файл data.xlsx
 import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
@@ -7,6 +8,7 @@ ua = UserAgent()
 headers = {
     'User-Agent': ua.random
 }
+
 
 
 # for i in range(0, 720, 20):
@@ -49,7 +51,7 @@ def get_data():
         }
         with open('data.json', 'a') as f:
             f.write(json.dumps(data, indent=4))
-
+        
 
 def main():
     get_data()
